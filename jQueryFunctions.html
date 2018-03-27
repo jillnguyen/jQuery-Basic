@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#show").hide();
+            $("#slide-down").hide();
+            $("#fade-in").hide();
+            $("#fade-in").hide();
+            $("#btn-show").click(function(){
+                $("#show").show();    
+            })
+            $("#btn-hide").click(function(){
+                $("#hide").hide();
+            })
+            $("#btn-toggle").click(function(){
+                $("#toggle").toggle();
+            })
+            $("#btn-sd").click(function(){
+                $("#slide-down").slideDown(400,function(){
+                    $("#complete").slideUp(400);
+                })
+            })
+            $("#btn-su").click(function(){
+                $("#slide-up").slideUp(400);
+            })
+            $("#btn-st").click(function(){
+                $("#image-toggle").slideToggle(500);
+            })
+            $("#btn-fi").click(function(){
+                $("#fade-in").fadeIn(500)
+            })
+            $("#btn-fi").mouseleave(function(){
+                $("#fade-in").fadeOut(500)
+            })
+            $("#btn-before").click(function(){})
+                $("#add").before("<p>This is added before</p>")
+            $("#btn-after").click(function(){
+                $("#add").after("<p>This is added after</p>")
+            })
+            $("#btn-prepend").click(function(){
+                $("#add").prepend("This is prepended before the paragraph")
+            })
+            $("#btn-append").click(function(){
+                $("#add").append("This is appended after the paragraph")
+            })
+            $("#btn-html").click(function(){
+                $("#add").html("<ul><li>Item 1</li><li>Item 2</li><li>Item 3</li><li>Item 4</li><li>Item 5</li></ul>")
+            })
+            $("#hover").hover(function(){
+                $("#input-box").val("NOW YOU ARE MESSING WITH JQUERY")
+            })
+            $("#btn-text").click(function(){
+                $("#text").text("Now click button B to add class and change this text into blue")
+            })
+            $("#btn-addClass").click(function(){
+                $("#text").addClass("blue");
+            })
+        })
+    </script>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <title>jQuery Functions</title>
+</head>
+<body>
+    <div id="header">
+        <h1>This is the big heading</h1>
+        <h3>This is also a heading</h3>
+    </div>
+    <div id="show-part">
+        <p id="show">This paragraph is shown when you click button show</p>
+        <button id="btn-show">Show</button>
+    </div>
+    <div id="hide-part">
+        <p id="hide">This paragraph is hidden when you click button hide</p>
+        <button id="btn-hide">Hide</button>
+    </div>    
+    <div id="toggle-part">
+        <p id="toggle">This paragraph is shown and hidden each time you click button toggle</p>
+        <button id="btn-toggle">Toggle</button>
+    </div>
+    <div id="slideDown-part">
+        <button id="btn-sd">Slide Down</button>
+        <p id="slide-down">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis reiciendis, consequatur velit quis obcaecati</p>
+        <p id="complete">Slide Down is to be complete when another paragraph is shown</p>
+    </div>
+    <div id="slideUp-part">
+        <button id="btn-su">Slide Up</button>
+        <p id="slide-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sint, esse delectus voluptas fugiat, id dolorum consequuntur sapiente enim corporis eum quod illo</p>
+    </div>
+    <div id="slideToggle-part">
+        <button id="btn-st">Slide Toggle</button>
+        <img src="https://doggyinwonderland.com/image/cache/data/slide1_1-1220x600.jpg" id="image-toggle">
+    </div>
+    <div id="fadeIn-part">
+        <button id="btn-fi">Fade In</button>
+        <p id="fade-in">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio aut obcaecati provident dolorem incidunt nemo iure laudantium ducimus tenetur? Ex nesciunt recusandae veniam praesentium consequuntur illum dicta ad, totam iusto.Aperiam aspernatur earum sunt a? Voluptas labore suscipit delectus ut alias perspiciatis in ipsum. Corrupti corporis, in expedita consectetur illum dolore esse quasi a aliquid laudantium recusandae. Ipsum, assumenda nobis!</p>
+    </div>
+    <div id="before-after-append-prepend">
+        <p id="add">Add more things to me by clicking buttons below</p>
+        <button id="btn-before">Before</button>
+        <button id="btn-after">After</button>
+        <button id="btn-append">Append</button>
+        <button id="btn-prepend">Prepend</button>
+        <button id="btn-html">Add list</button>
+    </div>
+    <div id="val-part">
+        <input type="text" value="Coding Dojo" id="input-box">
+        <p id="hover" class="blue">Hover over me to change the value of input</p>
+        <p id="text">Click button A below to change the text here.</p>
+        <button id="btn-text">Button A</button>
+        <button id="btn-addClass">Button B</button>
+    </div>
+
+
+</body>
+</html>

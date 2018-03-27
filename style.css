@@ -1,0 +1,48 @@
+*{
+ width: 970px;
+ margin: 0 auto;
+ background-color: lightblue;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;   
+}
+button{
+    font-size: 15px;
+    width: 20%;
+    height: 20px;
+    background-color: cadetblue;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px auto;
+}
+
+div {
+    border-bottom: 2px solid grey;
+    width: 90%;
+    text-align: center;
+}
+
+input {
+    width: 70%;
+    height: 20px;
+    margin-top: 20px;
+    background-color: beige;
+    border: 1px solid yellow;
+}
+
+img {
+    width: 50%;
+    display: block;
+    margin: 10px auto;
+}
+
+p {
+    font-size: 15px;
+    margin: 5px auto;
+    font-weight: bold;
+    color: grey;
+}
+
+.blue {
+    color: blue;
+    font-size: 20px;
+    background-color: lightslategray;
+}
